@@ -1,0 +1,633 @@
+$lineOneColor: #c7c5c3;
+$secondPartColor: #171717;
+$thirdPartColor: #b3b1af;
+$heroColor: #e5e2de;
+$soundShellColor: #7d7b7d;
+$btnOrange: #fa5b20;
+$btnBlack: #2c2c2c;
+$btnGray: #70706e;
+$slideBtnGray: #696765;
+$btnLightGray: #bbb8b7;
+@import url("https://db.onlinewebfonts.com/c/6a96506388a2641376ca65aea34226c0?family=Vitro+W00+Regular");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #ddd;
+}
+
+.machine {
+  width: 440px;
+  aspect-ratio: 11/15;
+  position: relative;
+  background-color: #888;
+  z-index: 1;
+  .first-part {
+    width: 100%;
+    height: calc(7 / 30 * 100%);
+    background-color: $heroColor;
+    display: grid;
+    /* 🔥 明確設定 22 列 30 行的網格 */
+    grid-template-columns: repeat(22, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+
+    .up-button-area {
+      grid-row: 1 / 2;
+      grid-column: 1 / 23;
+      background-color: $lineOneColor;
+      display: flex;
+      .iobtn {
+        font-size: 6px;
+        padding: 0 5px;
+        // margin: 0 10px;
+        width: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:nth-child(1) {
+          background-color: #eee;
+          color: #000;
+          margin-left: 20px;
+        }
+        &:nth-child(2) {
+          background-color: $btnOrange;
+          color: aliceblue;
+          margin-left: 38px;
+        }
+        &:nth-child(3) {
+          background-color: $btnBlack;
+          color: aliceblue;
+          margin-left: 19px;
+          padding: 0 8px;
+        }
+        &:nth-child(4) {
+          background-color: $btnBlack;
+          color: aliceblue;
+          padding: 0 10px;
+        }
+        &:nth-child(5) {
+          background-color: $btnGray;
+          color: aliceblue;
+          margin-left: 58px;
+        }
+      }
+    }
+    .hero-area {
+      grid-row: 2 / 10;
+      grid-column: 1 / 16;
+      background-color: $heroColor;
+      margin: 20px 0 0 20px;
+      h1 {
+        font-family: "Vitro W00 Regular";
+        font-size: 26px;
+        line-height: 20px;
+        letter-spacing: -0.5px;
+      }
+      h2 {
+        font-size: 12px;
+        font-weight: 400;
+        color: #fa5b20;
+      }
+      p {
+        margin-top: 47px;
+        font-size: 12px;
+        font-family: "Vitro W00 Regular";
+        color: #2c2c2c;
+        letter-spacing: -0.2px;
+      }
+    }
+    .sound-area {
+      grid-row: 2 / 10;
+      grid-column: 16 / 23;
+      background-color: $soundShellColor;
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      grid-template-rows: repeat(6, 1fr);
+      .sound-cube {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        .circle {
+          width: 7px;
+          height: 7px;
+          border-radius: 7px;
+          background-color: #202020;
+        }
+      }
+    }
+  }
+  .second-part {
+    width: 100%;
+    height: calc(6 / 30 * 100%);
+    background-color: $secondPartColor;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .icon-container.all {
+      width: 400px;
+      height: 80px;
+      margin: 20px;
+      background-color: #fff;
+      display: grid;
+      grid-template-columns: repeat(20, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+
+      .icon {
+        width: 20px;
+        height: 20px;
+      }
+
+      .icon-container.left {
+        grid-row: 1/5; //
+        grid-column: 1/7; //
+        background-color: rgb(45, 169, 93);
+        display: grid;
+        grid-template-rows: repeat(5, 1fr);
+        grid-template-columns: repeat(6, 1fr);
+        //要幾個格子就設幾個fr
+        // position: relative;
+        // .icon {
+        //   position: absolute;
+        //   top: 50%;
+        //   left: 50%;
+        //   transform: translate(-50%, -50%);
+        //   transform: translate(-50%, -50%);
+        //   width: 20px;
+        //   height: 20px;
+        //   background-color: #ee0;
+        // }
+      }
+      .icon-container.mid1 {
+        grid-row: 1/5; //
+        grid-column: 7/12; //
+        background-color: #693;
+        display: grid;
+        grid-template-rows: repeat(5, 1fr);
+        grid-template-columns: repeat(5, 1fr);
+        .icon {
+          width: 20px;
+          height: 20px;
+          font-size: 8px;
+        }
+        .bar {
+          background-color: aqua;
+          font-size: 8px;
+        }
+        .tic {
+          font-size: 10px;
+          background-color: #ee0;
+        }
+        .rebit {
+          background-color: white;
+        }
+        .main {
+          background-color: #fa5b20;
+          width: 40px;
+        }
+        .stop {
+          background-color: red;
+          border-radius: 50%;
+          transform: scale(0.8);
+          transform-origin: center;
+          box-sizing: border-box;
+        }
+        .num {
+          background-color: rgb(243, 34, 225);
+          font-size: 1.7rem;
+          font-weight: 500;
+          line-height: 40px;
+          text-align: center;
+          // padding-right: 10px;
+          &:nth-child(2) {
+            position: relative;
+          }
+          &:nth-child(3) {
+            position: relative;
+            .numTxt {
+              right: 3px;
+            }
+          }
+          &:nth-child(4) {
+            position: relative;
+          }
+          &:nth-child(5) {
+            position: relative;
+            .numTxt {
+              left: 3px;
+            }
+          }
+          .numTxt {
+            position: absolute;
+            top: 100%;
+            transform: translate(-50%, -50%);
+          }
+        }
+        .play {
+          // border-left: 11px solid blue;
+          // border-right: 11px solid red;
+          // border-bottom: 15px solid rgb(255, 255, 255);
+          // /* 設定三角形顏色 */
+          // border-top: none;
+          // box-sizing: border-box;
+          // // transform: scale(0.3);
+          // transform: rotate(90deg);
+          // // transform-origin: top;
+          clip-path: polygon(0 0, 0 100%, 100% 50%);
+          //好用要記住
+          background-color: rgb(255, 255, 255);
+          scale: (0.5);
+        }
+      }
+
+      .icon-container.mid2 {
+        grid-row: 1/5;
+        grid-column: 12/16;
+        background-color: #09e;
+      }
+      .icon-container.right {
+        grid-row: 1/5;
+        grid-column: 16/21;
+        background-color: #ee0;
+      }
+    }
+  }
+  .third-part {
+    width: 95.5%;
+    height: calc(17 / 30 * 100%);
+    margin: 0px 0px 0px 20px;
+    background-color: $thirdPartColor;
+    display: grid;
+    grid-template-rows: repeat(17, 1fr);
+    grid-template-columns: repeat(21, 1fr);
+    .line-one-text {
+      grid-row: 1/2;
+      grid-column: 1/22;
+      background-color: red;
+      display: flex;
+      font-size: 6px;
+      // align-items: center;
+      // justify-content: center;
+      p {
+        &:first-child {
+          margin-left: 10px;
+        }
+        &:nth-child(2) {
+          margin-left: 300px;
+        }
+        &:nth-child(3) {
+          margin-left: 20px;
+          letter-spacing: -0.3px;
+        }
+      }
+    }
+    .line-one-area {
+      grid-row: 2/4;
+      grid-column: 1/22;
+      background-color: #a46;
+      display: flex;
+      .knob {
+        width: 40px;
+        height: 40px;
+        background-color: $btnOrange;
+        border-radius: 20px;
+        margin-right: 20px;
+        box-shadow: 0 0 5px;
+
+        position: relative;
+        &::before {
+          content: "";
+          display: block;
+          width: 50%;
+          height: 50%;
+          box-shadow: 0 0 10px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          border-radius: 50%;
+        }
+      }
+      .semibtn {
+        width: 40px;
+        height: 40px;
+        background-color: #444;
+        margin-right: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 6px;
+        .btn1 {
+          display: flex;
+          justify-content: center;
+          width: 95%;
+          height: 50%;
+          background-color: #222;
+          border-radius: 2px;
+          color: #eee;
+        }
+        .btn2 {
+          width: 95%;
+          height: 50%;
+          color: #ddd;
+        }
+      }
+      .semibtn:nth-child(3) .btn2 {
+        //第二個
+        background-color: $btnOrange;
+        color: #e5e2de;
+      }
+      .semibtn:nth-child(4) .btn2 {
+        //第三個
+        background-color: $soundShellColor;
+        color: #e5e2de;
+      }
+      .fullblock {
+        width: 40px;
+        height: 40px;
+        margin-left: 20px;
+      }
+    }
+    .left-one-area {
+      grid-row: 5/15;
+      grid-column: 1/3;
+      background-color: #666;
+      display: grid;
+
+      flex-direction: column;
+      align-items: center;
+      .semibtn {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 6px;
+        color: #eee;
+        background-color: $btnBlack;
+        height: 20px;
+        border-radius: 3px;
+        &:nth-child(2) {
+          margin-top: 20px;
+        }
+        &:nth-child(4) {
+          // margin-top: 20px;
+          background-color: $heroColor;
+          color: #fff;
+        }
+      }
+      .slider {
+        margin: 20px 0 20px 16px;
+        height: 100px;
+        width: 8px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        .track {
+          height: 100%;
+          width: 80%;
+          background-color: #222;
+          border-radius: 5px;
+        }
+        .circube {
+          position: absolute;
+          width: 15px;
+          height: 15px;
+          background-color: #c7c5c3;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          border-radius: 7.5px;
+        }
+      }
+    }
+
+    .button-mid-area {
+      grid-column: 4/15;
+      grid-row: 4/16;
+      // background-color: darkcyan;
+      display: grid;
+      column-gap: 20px;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+      .button {
+        // grid-row: 1/3;
+        // grid-column: 1/4;
+        // display: grid;
+        // grid-template-rows: repeat(4,1);
+        // grid-template-columns: repeat(2,1fr);
+        background-color: burlywood;
+        display: flex;
+        flex-direction: column;
+
+        .note-light {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 6px;
+          // margin-bottom: 10px;
+          width: 40px;
+          height: 20px;
+          background-color: $thirdPartColor;
+          position: relative;
+          &::before {
+            content: "";
+            display: block;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background-color: #fa5b20;
+            position: absolute;
+            left: 3px;
+          }
+        }
+        .cube-hole {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: relative;
+          width: 40px;
+          height: 40px;
+          background-color: rgb(9, 9, 8);
+          .cube {
+            position: absolute;
+            font-size: 12px;
+            background-color: $btnBlack;
+            width: 90%;
+            height: 90%;
+            display: flex;
+            flex-direction: column;
+            color: #eee;
+          }
+        }
+      }
+    }
+    .right-one-area {
+      grid-row: 4/16;
+      grid-column: 16/21;
+      // background-color: #fff;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+      // grid-auto-flow: column;
+      column-gap: 20px;
+      // display: flex;
+      // flex-wrap: wrap;
+      // flex-direction: column;
+      .semibtn {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        // background-color: #a46;
+        width: 40px;
+        height: 60px;
+        // display: flex;
+        .note-light {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 8px;
+          // background-color: #ae3;
+          width: 40px;
+          height: 20px;
+        }
+        .semi {
+          display: flex;
+          flex-direction: column;
+          font-size: 8px;
+          background-color: rgb(8, 8, 8);
+          justify-content: space-between;
+          width: 40px;
+          height: 40px;
+          .btn1 {
+            height: calc(20px * 0.95);
+            // background-color: #FA5B20;
+            border-radius: 3px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          .btn2 {
+            height: calc(20px * 0.95);
+            background-color: #eee;
+            border-radius: 1px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+      }
+      & :nth-child(1) div.semi div.btn1 {
+        background-color: $btnOrange;
+        color: #e5e2de;
+      }
+      & :nth-child(2) div.semi div.btn1 {
+        background-color: #171717;
+        color: #e5e2de;
+      }
+      & :nth-child(3) div.semi div.btn1 {
+        background-color: #171717;
+        color: #e5e2de;
+      }
+      & :nth-child(4) div.semi div.btn1 {
+        background-color: $heroColor;
+        color: $secondPartColor;
+      }
+      .button {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        // background-color: #a46;
+        width: 40px;
+        height: 60px;
+        .note-light {
+          height: 20px;
+        }
+        .cube-hole {
+          height: 40px;
+          background-color: #171717;
+          position: relative;
+          // display: flex;
+          // justify-content: center;
+          // align-items: center;
+          .cube {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 8px;
+            height: 93%;
+            width: 93%;
+            background-color: $btnOrange;
+            // text-align: center;
+            border-radius: 3px;
+            // display: flex;
+            // align-items: center;
+            // justify-content: center;
+            position: relative;
+            p {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              // background-color: #ae3;
+            }
+          }
+        }
+      }
+      & :nth-child(5) .cube-hole .cube {
+        background-color: #ddd;
+        color: $soundShellColor;
+        font-weight: 300;
+        font-size: 24px;
+        p {
+          top: 45%;
+        }
+      }
+      & :nth-child(6) .cube-hole .cube {
+        background-color: #ddd;
+        color: $soundShellColor;
+        font-weight: 300;
+        font-size: 24px;
+        p {
+          top: 45%;
+        }
+      }
+      & :nth-child(7) .cube-hole .cube {
+        background-color: #fa5b20;
+        color: white;
+      }
+      & :nth-child(8) .cube-hole .cube {
+        background-color: $btnGray;
+        color: white;
+      }
+    }
+  }
+}
+
+.intro-line {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none; /* 讓它不影響機器內的互動 */
+  z-index: 2;
+
+  background: linear-gradient(
+      to right,
+      rgba(0, 0, 255, 0.5) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, rgba(0, 0, 255, 0.5) 1px, transparent 1px);
+  background-size: 1.25em 1.25em;
+}
