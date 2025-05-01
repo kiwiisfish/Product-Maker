@@ -1,0 +1,340 @@
+html,
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+img {
+  max-width: 100%;
+  opacity: 1;
+  margin: 10px 0;
+}
+
+.keyboard-container {
+  width: 100%;
+  aspect-ratio: 25/7.4;
+  background-color: #bfc3c9;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 1.5px 1px #444444;
+}
+
+.keyboard-board {
+  display: flex;
+  justify-content: space-between;
+  height: 94%;
+  width: 98.5%;
+  border-radius: 5px;
+}
+.keyboard-board .button-left {
+  width: 66%;
+  height: 100%;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.keyboard-board .button-left .left.line1 {
+  display: flex;
+}
+.keyboard-board .button-left .left.line1 .button.esc {
+  width: 9%;
+  aspect-ratio: 11/7;
+  display: flex;
+  align-items: end;
+  padding: 2em 3em 0.5em 0;
+}
+.keyboard-board .button-left .left.line1 .button.f1 {
+  width: 6.1%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.keyboard-board .button-left .left.line1 .button.f1 .sun {
+  font-size: 1.1vw;
+  margin-bottom: 0.3vw;
+}
+.keyboard-board .button-left .left.line1 .button.f1 .f {
+  font-size: 0.5vw;
+}
+.keyboard-board .button-left .left.line1 .button.back {
+  width: 6%;
+  text-align: center;
+  margin: 0 0 0 0.3vw;
+}
+.keyboard-board .button-left .left.line2 {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.7vw;
+}
+.keyboard-board .button-left .left.line2 .button {
+  padding-left: 0.8vw;
+}
+.keyboard-board .button-left .left.line2 .button.goback {
+  width: 9%;
+  aspect-ratio: 11/7;
+  font-size: clamp(4px, 1vw, 14px);
+  padding: 1.5em 0 0 3em;
+}
+.keyboard-board .button-left .left.line2 .button {
+  width: 6%;
+}
+.keyboard-board .button-left .left.line3 {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.7vw;
+}
+.keyboard-board .button-left .left.line3 .button {
+  padding-left: 0.8vw;
+}
+.keyboard-board .button-left .left.line3 .button.tab {
+  width: 9%;
+  aspect-ratio: 11/7;
+  font-size: clamp(4px, 4em, 10px);
+  padding: 1em 2em 0 0;
+}
+.keyboard-board .button-left .left.line3 .button {
+  width: 6%;
+}
+.keyboard-board .button-left .left.line4 {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.7vw;
+}
+.keyboard-board .button-left .left.line4 .button {
+  padding-left: 0.8vw;
+}
+.keyboard-board .button-left .left.line4 .button.translate {
+  position: relative;
+  width: 12%;
+  aspect-ratio: 15/7;
+  padding: 1em 6em 0 0;
+}
+.keyboard-board .button-left .left.line4 .button.translate::before {
+  top: 20%;
+  left: 10%;
+  position: absolute;
+  content: "";
+  width: 0.5em;
+  height: 0.5em;
+  border-radius: 50%;
+  background-color: #888;
+}
+.keyboard-board .button-left .left.line4 .button.enter {
+  width: 11%;
+  padding: 0 0 0 2.5em;
+  font-size: clamp(1px, 1.5vw, 20px);
+}
+.keyboard-board .button-left .left.line4 .button {
+  width: 6%;
+}
+.keyboard-board .button-left .left.line5 {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.7vw;
+}
+.keyboard-board .button-left .left.line5 .button {
+  padding-left: 0.8vw;
+}
+.keyboard-board .button-left .left.line5 .button {
+  width: 6%;
+}
+.keyboard-board .button-left .left.line5 .button.shiftL {
+  width: 14%;
+  aspect-ratio: 18/7;
+  padding: 1vw 3em 0 0;
+  font-size: clamp(8px, 1.3vw, 10px);
+}
+.keyboard-board .button-left .left.line5 .button.shiftR {
+  width: 14%;
+  aspect-ratio: 18/7;
+  padding: 1vw 0em 0 5em;
+  font-size: clamp(8px, 1.3vw, 10px);
+}
+.keyboard-board .button-left .left.line6 {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.7vw;
+}
+.keyboard-board .button-left .left.line6 .button.controlL {
+  width: 8%;
+  padding: 0 2em 0 0;
+}
+.keyboard-board .button-left .left.line6 .button.controlL .mark {
+  padding-right: 1em;
+}
+.keyboard-board .button-left .left.line6 .button.controlR {
+  width: 8%;
+  padding: 0 0 0 2em;
+}
+.keyboard-board .button-left .left.line6 .button.controlR .mark {
+  padding-left: 3em;
+}
+.keyboard-board .button-left .left.line6 .button.optionL {
+  width: 8%;
+  padding: 0 0 0 2em;
+}
+.keyboard-board .button-left .left.line6 .button.optionL .mark {
+  padding-left: 2em;
+  font-size: clamp(6px, 1vw, 12px);
+}
+.keyboard-board .button-left .left.line6 .button.optionR {
+  width: 8%;
+  padding: 0 2em 0 0;
+}
+.keyboard-board .button-left .left.line6 .button.optionR .mark {
+  padding-right: 1em;
+  font-size: clamp(6px, 1vw, 12px);
+}
+.keyboard-board .button-left .left.line6 .button.commandL {
+  width: 10%;
+  padding: 0 0 0 2em;
+}
+.keyboard-board .button-left .left.line6 .button.commandL .mark {
+  padding-left: 3.5em;
+  font-size: clamp(6px, 1vw, 12px);
+}
+.keyboard-board .button-left .left.line6 .button.commandR {
+  width: 10%;
+  padding: 0 2em 0 0;
+}
+.keyboard-board .button-left .left.line6 .button.commandR .mark {
+  padding-right: 2em;
+  font-size: clamp(6px, 1vw, 12px);
+}
+.keyboard-board .button-left .left.line6 .button.space {
+  width: 41%;
+  aspect-ratio: 50/7;
+}
+.keyboard-board .button-mid {
+  width: 13.5%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.keyboard-board .button-mid .top-button {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.keyboard-board .button-mid .top-button .button {
+  width: 28%;
+  height: 4.5em;
+  margin-top: 1.2vw;
+}
+.keyboard-board .button-mid .top-button .button:nth-child(-n + 3) {
+  margin-top: 0;
+}
+.keyboard-board .button-mid .top-button .button.upR {
+  transform: rotate(-90deg);
+}
+.keyboard-board .button-mid .top-button .button.downR {
+  transform: rotate(90deg);
+}
+.keyboard-board .button-mid .down-button {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.keyboard-board .button-mid .down-button .up {
+  width: 100%;
+  height: 4.5em;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+.keyboard-board .button-mid .down-button .button {
+  width: 28%;
+  height: 4.5em;
+  margin-top: 1.2em;
+  justify-content: center;
+}
+.keyboard-board .button-right {
+  width: 18.1%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.keyboard-board .button-right .part1 {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.keyboard-board .button-right .part1 .button {
+  width: 21%;
+  height: 4.5em;
+  margin-top: 1.2vw;
+}
+.keyboard-board .button-right .part1 .button:nth-child(-n + 4) {
+  margin-top: 0;
+}
+.keyboard-board .button-right .part2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.keyboard-board .button-right .part2 .part2-1 {
+  width: 75%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.keyboard-board .button-right .part2 .part2-1 .button {
+  width: 28%;
+  height: 4.5em;
+  margin-top: 1.2vw;
+}
+.keyboard-board .button-right .part2 .part2-1 .button:last-child {
+  margin-top: 1vw;
+}
+.keyboard-board .button-right .part2 .part2-1 .button.zero {
+  margin-top: 1vw;
+  width: 62%;
+  height: 4.5em;
+}
+.keyboard-board .button-right .part2 .part2-2 {
+  width: 25%;
+}
+.keyboard-board .button-right .part2 .part2-2 .button.goup {
+  margin-top: 1.2vw;
+  aspect-ratio: 5/11;
+  padding-top: 4em;
+  font-size: clamp(6px, 1.3vw, 16px);
+}
+
+.button {
+  box-sizing: border-box;
+  background-color: #f5f5f5;
+  font-size: clamp(1px, 0.8vw, 14px);
+  border-radius: 0.5vw;
+  color: #888;
+  box-shadow: 0 0 0.6px 1.5px rgba(68, 68, 68, 0.5);
+  margin: 0 0.3vw;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.button .mark {
+  width: 50%;
+}
+.button .MPS {
+  width: 50%;
+}
+.button .num {
+  width: 50%;
+}
+.button .radical {
+  width: 50%;
+} /*# sourceMappingURL=keyboard.css.map */
